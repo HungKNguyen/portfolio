@@ -170,24 +170,28 @@ const S = {
 
     PROJECT_PORTFOLIO_TITLE : "Portfolio Page",
     PROJECT_PORTFOLIO_TEXT : "For the longest time, I have wanted my own website to showcase my skills as well as demonstrating my web development skills. So finally here it is, my portfolio website.",
-    PROJECT_PORTFOLIO_KEY_WORDS : ["React.js", "HTML", "CSS", "Portfolio"],
+    PROJECT_PORTFOLIO_KEY_WORDS : "React.js, HTML, CSS, Portfolio",
+    PROJECT_PORTFOLIO_GITHUB_LINK : "https://github.com/HungKNguyen/portfolio",
 
     PROJECT_MINE_TITLE : "Minesweeper solver",
     PROJECT_MINE_TEXT : "I made this project while teaching myself Python." +
         "I used Pygame to remake the game and as an added bonus implemented an AI solver to play the game automatically",
-    PROJECT_MINE_KEY_WORDS : ["Python", "Pygame", "AI"],
+    PROJECT_MINE_KEY_WORDS : "Python, Pygame, AI",
+    PROJECT_MINE_GITHUB_LINK : "https://github.com/HungKNguyen/MineSweeperCloneAndAISolver",
 
     PROJECT_RESEARCH_TITLE : "COVID Research",
     PROJECT_RESEARCH_TEXT : "This is part of my advanced econometrics coursework." +
         " I built a lagged first difference model to measure the effectiveness of COVID non-pharmaceutical interventions using R",
-    PROJECT_RESEARCH_KEY_WORDS : ["R Markdown", "Tidyverse", "Data Analysis", "Research"],
+    PROJECT_RESEARCH_KEY_WORDS : "R Markdown, Tidyverse, Data Analysis, Research",
+    PROJECT_RESEARCH_GITHUB_LINK : "https://github.com/HungKNguyen/COVIDNPIs",
 
     PROJECT_EBOOK_TITLE : "Mock EBook Website",
     PROJECT_EBOOK_TEXT : "My first website, following a Coursera class on Fullstack web development." +
         " This website mock a EBook selling service, with MongoDB database, Express.js/Node.js back-end, and React.js front-end." +
         " In addition, this website use local-authentication and Facebook/Google OAuth2.0." +
         " The site is deployed using Heroku (this project will go offline on Nov 28th)",
-    PROJECT_EBOOK_KEY_WORDS : ["MongoDB", "Express.js", "Node.js", "React.js", "OAuth2.0", "Fullstack"],
+    PROJECT_EBOOK_KEY_WORDS : "MERN Stack, OAuth2.0, Fullstack",
+    PROJECT_EBOOK_GITHUB_LINK : "https://github.com/HungKNguyen/EBookVendorBackend",
 }
 
 export default S;

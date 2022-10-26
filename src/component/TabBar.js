@@ -5,8 +5,8 @@ import S from '../resources/string';
 
 export function TabBar() {
     return (
-        <Navbar className="tab_bar" fixed="top">
-            <Container fluid className="px-5">
+        <Navbar className="tab_bar px-md-5" fixed="top">
+            <Container fluid>
                 <Navbar.Brand href="#home">
                     <Container>
                         <Row style={{width : "100%", height : "100%"}}>

@@ -19,14 +19,14 @@ export function Work() {
 
 function WorkItem(props) {
     const listItems = props.texts.map((text, id) =>
-        <li className="h6" key={id} style={{lineHeight: 1.8}}>{text}</li>
+        <li key={id} style={{lineHeight: 1.8}}>{text}</li>
     )
     return (
         <Row>
-            <Col md={{ span : 3, order: props.logo_pos === "left" ? 12 : 1 }} className="mx-2 my-md-0 my-sm-5">
-                <div className="image_wrap" style={{maxWidth : "300px", maxHeight : "300px"}}>
+            <Col md={{ span : 3, order: props.logo_pos === "left" ? 12 : 1 }} className="my-2 my-md-0 my-sm-5">
+                <Col xs={{ span: 6, offset : 3}} md={{span:12, offset :0}} className="image_wrap" style={{maxWidth : "300px", maxHeight : "300px"}}>
                     <Image fluid height="100%" width="100%" src={props.logo} className="image p-2"/>
-                </div>
+                </Col>
             </Col>
             <Col  className="mx-2">
                 <Stack gap={2}>

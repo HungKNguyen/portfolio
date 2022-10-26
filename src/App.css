@@ -4,9 +4,8 @@
   --graybackground : #424242;
   --primary: #F5F5F5;
   --secondary: #8B8E97;
+  --tertiary : #bdbdbd;
   --accent: #66FFBB;
-  --placeholderbg: #af1415;
-  --placeholderbd: #000000
 }
 
 .custom_button {
@@ -28,6 +27,10 @@ span.accent {
 
 span.secondary {
   color: var(--secondary);
+}
+
+span.tertiary {
+  color: var(--tertiary);
 }
 
 .profile_wrap {

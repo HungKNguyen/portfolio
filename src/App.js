@@ -13,7 +13,7 @@ import {Projects} from "./component/Projects";
 
 function App() {
   return (
-    <Stack className="App py-5" fluid gap={5}>
+    <Stack className="App py-5 px-1" fluid gap={5}>
         <Row><TabBar /></Row>
         <Row className="justify-content-lg-center py-5" id="about">
             <Col lg={8}><About/></Col>
@@ -27,8 +27,8 @@ function App() {
         <Row className="justify-content-lg-center py-5"  id="experiences">
             <Col lg={9}><Work/></Col>
         </Row>
-        <Row className="justify-content-lg-center py-5 my_placeholder">
-            <Col className="my_placeholder" lg={10}><Projects/></Col>
+        <Row className="justify-content-lg-center py-5">
+            <Col lg={8}><Projects/></Col>
         </Row>
         <Row className="justify-content-lg-center py-5 my_placeholder">
             <Col className="my_placeholder" lg={8}><Education/></Col>
