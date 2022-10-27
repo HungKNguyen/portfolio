@@ -3,7 +3,6 @@ import {Button, Card, Row, Col, Stack} from "react-bootstrap";
 import LUBACKGROUND from "../resources/images/LU_background.png";
 import SchoolIcon from '@mui/icons-material/School';
 import ArticleIcon from '@mui/icons-material/Article';
-import GitHubIcon from "@mui/icons-material/GitHub";
 import Transcript from "../resources/Academic History.pdf";
 
 export function Education() {

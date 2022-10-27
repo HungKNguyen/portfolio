@@ -1,5 +1,5 @@
 import S from "../resources/string";
-import {Col, Container, Image, Row, Stack} from "react-bootstrap";
+import {Col, Image, Row, Stack} from "react-bootstrap";
 import IDLOGO from "../resources/images/ID_logo.png";
 import LULOGO from "../resources/images/LU_logo.png";
 
@@ -24,7 +24,7 @@ function WorkItem(props) {
     return (
         <Row>
             <Col md={{ span : 3, order: props.logo_pos === "left" ? 12 : 1 }} className="my-2 my-md-0 my-sm-5">
-                <Col xs={{ span: 6, offset : 3}} md={{span:12, offset :0}} className="image_wrap" style={{maxWidth : "300px", maxHeight : "300px"}}>
+                <Col xs={{ span: 6, offset : 3}} md={{span:12, offset :0}} className="image_wrap">
                     <Image fluid height="100%" width="100%" src={props.logo} className="image p-2"/>
                 </Col>
             </Col>

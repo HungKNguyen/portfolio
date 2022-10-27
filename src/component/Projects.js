@@ -1,5 +1,5 @@
 import S from "../resources/string";
-import {Button, Card, Carousel, Col, Container, Image, Row, Stack} from "react-bootstrap";
+import {Button, Card, Carousel, Col, Row, Stack} from "react-bootstrap";
 import PORT1 from "../resources/images/portfolio_1.png";
 import PORT2 from "../resources/images/portfolio_2.png";
 import PORT3 from "../resources/images/portfolio_3.png";

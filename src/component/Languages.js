@@ -73,15 +73,19 @@ function LanguageItem(props)
                         {props.languageText}
                     </p>
                 </Col>
-                <Col>
-                    <p className="h3 my-auto align-self-center text-end">{S.LANGUAGES_PROFICIENCY}
-                        <span className="accent">{props.proficiency}</span>
-                    </p>
+                <Col md={7} xs={9}>
+                    <Stack direction="horizontal">
+                        <p className="h3 my-auto align-self-center text-end">{S.LANGUAGES_PROFICIENCY}
+                            <span className="accent">{props.proficiency}</span>
+                        </p>
+                        <ArrowDropDownIcon fontSize="large" style={dropDownStyle}
+                                           onClick={() => {
+                                               setShowDetails(!showDetails)
+                                           }}/>
+                    </Stack>
+
+
                 </Col>
-                <Col xs={1}><ArrowDropDownIcon fontSize="large" style={dropDownStyle}
-                                               onClick={() => {
-                                                   setShowDetails(!showDetails)
-                                               }}/></Col>
 
             </Row>
             <Row style={listStyle}>

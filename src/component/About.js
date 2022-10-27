@@ -7,9 +7,9 @@ export function About() {
         <Container className="pt-3">
             <Row className="py-4">
                 <Col md={4}>
-                    <div className="profile_wrap" >
+                    <Col xs={{ span: 8, offset : 2}} md={{span:12, offset :0}} className="profile_wrap">
                         <Image fluid roundedCircle="true" src={profile} className="profile p-2"/>
-                    </div>
+                    </Col>
                 </Col>
                 <Col md={8}>
                     <Stack gap={4}>

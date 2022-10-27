@@ -82,7 +82,7 @@ const S = {
     TECH_FRONTEND_ICONS : ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
                             "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"],
-    TECH_FRONTEND_TEXT : "I love to built beautiful websites using React.js and HTML/CSS for customization",
+    TECH_FRONTEND_TEXT : "I love to build beautiful websites using React.js and HTML/CSS for customization",
 
     TECH_BACKEND_TITLE : "Back End Servers",
     TECH_BACKEND_ICONS : ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
@@ -95,7 +95,7 @@ const S = {
     TECH_MOBILE_TITLE : "Mobile Development",
     TECH_MOBILE_ICONS : ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg"],
-    TECH_MOBILE_TEXT : "I share the same love for web development for mobile development for IOS and Android",
+    TECH_MOBILE_TEXT : "I also built mobile application on IOS and Android platforms",
 
     TECH_VS_TITLE : "Version Control",
     TECH_VS_ICONS : ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
@@ -174,7 +174,7 @@ const S = {
     PROJECT_PORTFOLIO_GITHUB_LINK : "https://github.com/HungKNguyen/portfolio",
 
     PROJECT_MINE_TITLE : "Minesweeper solver",
-    PROJECT_MINE_TEXT : "I made this project while teaching myself Python." +
+    PROJECT_MINE_TEXT : "I made this project while teaching myself Python. " +
         "I used Pygame to remake the game and as an added bonus implemented an AI solver to play the game automatically",
     PROJECT_MINE_KEY_WORDS : "Python, Pygame, AI",
     PROJECT_MINE_GITHUB_LINK : "https://github.com/HungKNguyen/MineSweeperCloneAndAISolver",
@@ -187,8 +187,8 @@ const S = {
 
     PROJECT_EBOOK_TITLE : "Mock EBook Website",
     PROJECT_EBOOK_TEXT : "My first website, following a Coursera class on Fullstack web development." +
-        " This website mock a EBook selling service, with MongoDB database, Express.js/Node.js back-end, and React.js front-end." +
-        " In addition, this website use local-authentication and Facebook/Google OAuth2.0." +
+        " This website mocks a EBook selling service, with MongoDB database, Express.js/Node.js back-end, and React.js front-end." +
+        " In addition, this website uses local-authentication and Facebook/Google OAuth2.0." +
         " The site is deployed using Heroku (this project will go offline on Nov 28th)",
     PROJECT_EBOOK_KEY_WORDS : "MERN Stack, OAuth2.0, Fullstack",
     PROJECT_EBOOK_GITHUB_LINK : "https://github.com/HungKNguyen/EBookVendorBackend",
