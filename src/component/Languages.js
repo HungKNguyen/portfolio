@@ -74,7 +74,7 @@ function LanguageItem(props)
                     </p>
                 </Col>
                 <Col md={7} xs={9}>
-                    <Stack direction="horizontal">
+                    <Stack direction="horizontal" className="justify-content-end">
                         <p className="h3 my-auto align-self-center text-end">{S.LANGUAGES_PROFICIENCY}
                             <span className="accent">{props.proficiency}</span>
                         </p>
@@ -83,8 +83,6 @@ function LanguageItem(props)
                                                setShowDetails(!showDetails)
                                            }}/>
                     </Stack>
-
-
                 </Col>
 
             </Row>
