@@ -54,10 +54,6 @@ function Project(props) {
             <Row className="d-none d-md-flex">
                 <Col xs={{ span: 6, order: props.imgPos === "left" ? 12 : 1}} className="align-self-center">
                     <div style={{outline : "var(--accent) solid 2px"}}>
-                        {/*<Image src={props.imgSrcs[0]} alt="Card image" style={{*/}
-                        {/*    width : "100%",*/}
-                        {/*    filter: "grayscale(100%) brightness(50%)",*/}
-                        {/*}}/>*/}
                         <Carousel fade controls={false} indicators={false} pause={false}
                                   interval={hover ? 1000 : null} style={carouselStyle}
                         onMouseEnter={() => setHover(true)}

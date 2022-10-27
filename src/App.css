@@ -34,8 +34,10 @@ span.tertiary {
 }
 
 .profile_wrap {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
-  outline: var(--accent) solid 4px;
+  border: var(--accent) solid 4px;
   aspect-ratio: 1 / 1;
   justify-content: center;
 }
@@ -50,7 +52,7 @@ span.tertiary {
 }
 
 .image_wrap {
-  outline: var(--accent) solid 5px;
+  border: var(--accent) solid 5px;
   aspect-ratio: 1 / 1;
   justify-content: center;
 }

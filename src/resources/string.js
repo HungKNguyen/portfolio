@@ -192,6 +192,28 @@ const S = {
         " The site is deployed using Heroku (this project will go offline on Nov 28th)",
     PROJECT_EBOOK_KEY_WORDS : "MERN Stack, OAuth2.0, Fullstack",
     PROJECT_EBOOK_GITHUB_LINK : "https://github.com/HungKNguyen/EBookVendorBackend",
+
+
+    EDU_TITLE : "My education",
+    EDU_UNIVERSITY : "Lawrence University",
+    EDU_DEGREE : "BA in Computer Science and Economics",
+    EDU_GRADUATING : "June 2023",
+    EDU_GPA : "3.99 GPA | 4.0 Major GPA",
+    EDU_ACHIEVEMENT : ["Philip & Rosemary Wiley Bradley Achievement Scholarship in Economics",
+        "Dean's List, International Student Scholarship & Grant",
+        "Relevant Coursework: Software Development, System Programming, IOS/Android Development, Web Development, Objected Oriented Programming Design, Data Structure and Algorithms, Machine Learning,\n" +
+        "Artificial Intelligence"],
+    EDU_MERIT_LINK : "https://meritpages.com/hungknguyen",
+
+    HIRING_TITLE : "Let's work together",
+    HIRING_TEXT : <span>
+        <span>I am currently looking for a <span className="accent">junior software developer</span> position,</span>
+        <span> in the fields of <span className="accent">Web Development</span> and <span className="accent">Mobile Development. </span></span>
+        <span>If you are hiring for such position and interested in my skills, I would love to chat. </span>
+        <span>I can be reached via email at <span className="accent">hung.k.nguyen@lawrence.edu.</span></span>
+                    </span>,
+
+    FOOTER_TITLE : "Designed and Built by Hung Nguyen",
 }
 
 export default S;

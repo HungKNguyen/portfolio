@@ -15,7 +15,7 @@ export function About() {
                     <Stack gap={4}>
                         <p className="fw-bold display-6 accent mb-0">{S.ABOUT_GREET}</p>
                         <p className="fw-semibold display-3 mb-0">{S.ABOUT_GREET_NAME}</p>
-                        <p className="h2 fw-normal mb-0">{S.ABOUT_GREET_STATEMENT}</p>
+                        <p className="h1 mb-0">{S.ABOUT_GREET_STATEMENT}</p>
                     </Stack>
                 </Col>
             </Row>
