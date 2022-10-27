@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.d22d7e81.css",
+    "main.js": "/portfolio/static/js/main.99f3ecd9.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/LU_background.png": "/portfolio/static/media/LU_background.cfaf0804f5e3a60ad3eb.png",
+    "static/media/profile.png": "/portfolio/static/media/profile.0b9fc7f350808571eae4.png",
+    "static/media/mine_2.png": "/portfolio/static/media/mine_2.e6c3ce46dc50093f9812.png",
+    "static/media/mine_3.png": "/portfolio/static/media/mine_3.ca4e1bb39a7026f717a7.png",
+    "static/media/research_2.png": "/portfolio/static/media/research_2.7849f1470bd642a2a918.png",
+    "static/media/research_3.png": "/portfolio/static/media/research_3.ac0b3aabb12e2de0a3b9.png",
+    "static/media/mine_1.png": "/portfolio/static/media/mine_1.9bd8b28319cb28b0cc80.png",
+    "static/media/research_1.png": "/portfolio/static/media/research_1.22e5d600f1b3c665e3d6.png",
+    "static/media/portfolio_1.png": "/portfolio/static/media/portfolio_1.df76911b9fcb2f230581.png",
+    "static/media/portfolio_3.png": "/portfolio/static/media/portfolio_3.dd6807ae02bef32c5377.png",
+    "static/media/HungNguyenOct2023.pdf": "/portfolio/static/media/HungNguyenOct2023.bb99ab4938e37c3221ab.pdf",
+    "static/media/Academic History.pdf": "/portfolio/static/media/Academic History.58d83c2579a12aed7209.pdf",
+    "static/media/portfolio_2.png": "/portfolio/static/media/portfolio_2.950a9b667e01c4980ae7.png",
+    "static/media/ebook_3.png": "/portfolio/static/media/ebook_3.8b53696c323c6920c605.png",
+    "static/media/ebook_1.png": "/portfolio/static/media/ebook_1.6a957c05c1ce0e7ca05e.png",
+    "static/media/ebook_2.png": "/portfolio/static/media/ebook_2.b27482a11d7811546d77.png",
+    "static/media/logo.png": "/portfolio/static/media/logo.a096b70e60f2d921324a.png",
+    "static/media/LU_logo.png": "/portfolio/static/media/LU_logo.03dae169d90187021835.png",
+    "index.html": "/portfolio/index.html",
+    "main.d22d7e81.css.map": "/portfolio/static/css/main.d22d7e81.css.map",
+    "main.99f3ecd9.js.map": "/portfolio/static/js/main.99f3ecd9.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d22d7e81.css",
+    "static/js/main.99f3ecd9.js"
+  ]
+}
