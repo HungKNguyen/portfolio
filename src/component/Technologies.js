@@ -1,6 +1,7 @@
 import {Card, Col, Stack, Row, Button, Carousel} from "react-bootstrap";
 import S from "../resources/string";
 import {useState} from "react";
+import {FadeInSection} from "./FadeInWrap";
 
 export function Technologies() {
     const [showMore, setShowMore] = useState(false);
@@ -41,7 +42,13 @@ export function Technologies() {
     ]
 
     function CardRow(start, end) {
-        return (cards.slice(start, end)).map((card) => <Col>{card}</Col>)
+        return (cards.slice(start, end)).map((card, index) =>
+            <Col className="d-flex">
+                <FadeInSection direction="down" delay={1000 / (end-start-1) * index}>
+                    {card}
+                </FadeInSection>
+            </Col>
+        )
     }
 
     const carouselItems = cards.map((card) =>
@@ -56,13 +63,15 @@ export function Technologies() {
 
     return (
         <Stack gap={4}>
-            <p className="display-6 text-center fw-semibold">{S.TECH_TITLE}</p>
-            <Stack className="d-none d-md-flex" gap={4}>
-                <Row xs={2} md={4} className="g-4 my-4">
+            <FadeInSection>
+                <p className="display-6 text-center fw-semibold">{S.TECH_TITLE}</p>
+            </FadeInSection>
+            <Stack className="d-none d-md-flex" gap={5}>
+                <Row xs={2} md={4} className="g-4 mt-4">
                     {CardRow(0,4)}
                 </Row>
                 <div style={listStyle}>
-                    <Row xs={2} md={4} className="g-4 mb-4">
+                    <Row xs={2} md={4} className="g-4 my-4">
                         {CardRow(4,8)}
                     </Row>
                     <Row xs={2} md={4} className="g-4 my-4">
@@ -76,9 +85,11 @@ export function Technologies() {
                 }}>{buttonText}</Button>
             </Stack>
             <Row className="d-block d-md-none">
-                <Carousel interval={2000}>
-                    {carouselItems}
-                </Carousel>
+                <FadeInSection delay={500}>
+                    <Carousel interval={2000}>
+                        {carouselItems}
+                    </Carousel>
+                </FadeInSection>
             </Row>
         </Stack>
     )

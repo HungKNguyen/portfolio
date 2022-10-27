@@ -8,6 +8,35 @@
   --accent: #66FFBB;
 }
 
+.fade-in-section.up {
+  transform: translateY(20vh);
+}
+
+.fade-in-section.down {
+  transform: translateY(-20vh);
+}
+
+.fade-in-section.right {
+  transform: translateX(-20vh);
+}
+
+.fade-in-section.left {
+  transform: translateX(20vh);
+}
+
+.fade-in-section {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
 .custom_button {
   color: var(--accent) !important;
   border-color: var(--accent) !important;

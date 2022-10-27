@@ -10,7 +10,7 @@ const S = {
     ABOUT_GREET_STATEMENT : <span>I am an aspiring <span className="accent">Software Developer</span> and
                             I like to write <span className="accent">code</span>.</span>,
     ABOUT_GREET_INTRO : <span className="secondary">Welcome to my little corner of the Internet.
-                    I am a college undergrad at Lawrence University majoring in Computer Science and Economics.
+                    I am an undergraduate at Lawrence University majoring in Computer Science and Economics.
                     I love to solve problems, write software for businesses, and educate others.
                     If you are hiring for a software engineering position, I would love to connect for an interview.</span>,
 

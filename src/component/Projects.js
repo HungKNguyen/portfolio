@@ -14,6 +14,7 @@ import RESEARCH2 from "../resources/images/research_2.png";
 import RESEARCH3 from "../resources/images/research_3.png";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {useState} from "react";
+import {FadeInSection} from "./FadeInWrap";
 
 export function Projects() {
     const portfolioImgs = [PORT1, PORT2, PORT3]
@@ -23,7 +24,9 @@ export function Projects() {
 
     return (
         <Stack gap={5}>
-            <p className="display-6 text-center fw-semibold">{S.PROJECT_TITLE}</p>
+            <FadeInSection>
+                <p className="display-6 text-center fw-semibold">{S.PROJECT_TITLE}</p>
+            </FadeInSection>
             <Project imgPos="left" title={S.PROJECT_PORTFOLIO_TITLE} keywords={S.PROJECT_PORTFOLIO_KEY_WORDS}
                      text={S.PROJECT_PORTFOLIO_TEXT} imgSrcs={portfolioImgs} gitHubLink={S.PROJECT_PORTFOLIO_GITHUB_LINK}/>
             <Project imgPos="right" title={S.PROJECT_EBOOK_TITLE} keywords={S.PROJECT_EBOOK_KEY_WORDS}
@@ -53,70 +56,83 @@ function Project(props) {
         <Col className="my-3" md={{ span : 10, offset : props.imgPos === "left" ? 0 : 2}}>
             <Row className="d-none d-md-flex">
                 <Col xs={{ span: 6, order: props.imgPos === "left" ? 12 : 1}} className="align-self-center">
-                    <div style={{outline : "var(--accent) solid 2px"}}>
-                        <Carousel fade controls={false} indicators={false} pause={false}
-                                  interval={hover ? 1000 : null} style={carouselStyle}
-                        onMouseEnter={() => setHover(true)}
-                        onMouseLeave={() => setHover(false)}>
-                            <Carousel.Item>
-                                <img
-                                    className="w-100"
-                                    src={props.imgSrcs[0]}
-                                    alt="First slide"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="w-100"
-                                    src={props.imgSrcs[1]}
-                                    alt="Second slide"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="w-100"
-                                    src={props.imgSrcs[2]}
-                                    alt="Third slide"
-                                />
-                            </Carousel.Item>
-                        </Carousel>
-                    </div>
-
+                    <FadeInSection direction={props.imgPos === "left" ? "right" : "left"}>
+                        <div style={{outline : "var(--accent) solid 2px"}}>
+                            <Carousel fade controls={false} indicators={false} pause={false}
+                                      interval={hover ? 1000 : null} style={carouselStyle}
+                                      onMouseEnter={() => setHover(true)}
+                                      onMouseLeave={() => setHover(false)}>
+                                <Carousel.Item>
+                                    <img
+                                        className="w-100"
+                                        src={props.imgSrcs[0]}
+                                        alt="First slide"
+                                    />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="w-100"
+                                        src={props.imgSrcs[1]}
+                                        alt="Second slide"
+                                    />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img
+                                        className="w-100"
+                                        src={props.imgSrcs[2]}
+                                        alt="Third slide"
+                                    />
+                                </Carousel.Item>
+                            </Carousel>
+                        </div>
+                    </FadeInSection>
                 </Col>
                 <Col className={props.imgPos === "left" ? "text-end" : "text-start"}
                      style={{marginLeft : props.imgPos === "left" ? "-125px" : "0",
                     marginRight : props.imgPos === "left" ? "0" : "-125px",
                     zIndex: 1,}}>
                     <Stack className="d-inline" gap={5}>
-                        <Row className="my-2"><span className="accent">{S.PROJECT_BADGE}</span></Row>
-                        <Row className="my-2"><p className="h3"><span className="fw-semibold">{props.title}</span></p></Row>
-                        <Row className="p-3 my-3" style={{backgroundColor : "var(--sectionbackground)", borderRadius : "5px"}}>
-                            <span className="tertiary">{props.text}</span>
-                        </Row>
-                        <Row className="my-3"><span className="accent">{props.keywords}</span></Row>
-                        <Button variant="outline-light" as="a" href={props.gitHubLink} target="_blank">
-                            <GitHubIcon/> Visit Repo
-                        </Button>
+                        <FadeInSection direction={props.imgPos === "left" ? "left" : "right"} delay={200}>
+                            <Row className="my-2"><span className="accent">{S.PROJECT_BADGE}</span></Row>
+                        </FadeInSection>
+                        <FadeInSection direction={props.imgPos === "left" ? "left" : "right"} delay={400}>
+                            <Row className="my-2"><p className="h3"><span className="fw-semibold">{props.title}</span></p></Row>
+                        </FadeInSection>
+                        <FadeInSection direction={props.imgPos === "left" ? "left" : "right"} delay={600}>
+                            <Row className="p-3 my-3" style={{backgroundColor : "var(--sectionbackground)", borderRadius : "5px"}}>
+                                <span className="tertiary">{props.text}</span>
+                            </Row>
+                        </FadeInSection>
+                        <FadeInSection direction={props.imgPos === "left" ? "left" : "right"} delay={800}>
+                            <Row className="my-3"><span className="accent">{props.keywords}</span></Row>
+                        </FadeInSection>
+                        <FadeInSection direction={props.imgPos === "left" ? "left" : "right"} delay={1000}>
+                            <Button variant="outline-light" as="a" href={props.gitHubLink} target="_blank">
+                                <GitHubIcon/> Visit Repo
+                            </Button>
+                        </FadeInSection>
                     </Stack>
                 </Col>
             </Row>
-            <Row className="d-block d-md-none">
-                <Card className="bg-dark text-white">
-                    <Card.Img src={props.imgSrcs[0]} alt="Card image"  style={backGroundImg}/>
-                    <Card.ImgOverlay style={{overflow: "overlay"}}>
-                        <Card.Subtitle><span className="accent small">{S.PROJECT_BADGE}</span></Card.Subtitle>
-                        <Card.Title><span className="fw-semibold">{props.title}</span></Card.Title>
-                        <Card.Text><span className="tertiary">
+            <FadeInSection>
+                <Row className="d-block d-md-none">
+                    <Card className="bg-dark text-white">
+                        <Card.Img src={props.imgSrcs[0]} alt="Card image"  style={backGroundImg}/>
+                        <Card.ImgOverlay style={{overflow: "overlay"}}>
+                            <Card.Subtitle><span className="accent small">{S.PROJECT_BADGE}</span></Card.Subtitle>
+                            <Card.Title><span className="fw-semibold">{props.title}</span></Card.Title>
+                            <Card.Text><span className="tertiary">
                             {props.text}
                         </span></Card.Text>
-                        <Card.Text><span className="accent small">
+                            <Card.Text><span className="accent small">
                             {props.keywords}
                         </span></Card.Text>
-                        <Button variant="outline-light" as="a" href={props.gitHubLink} target="_blank" size="sm">
-                            <GitHubIcon fontSize="small"/> Visit Repo</Button>
-                    </Card.ImgOverlay>
-                </Card>
-            </Row>
+                            <Button variant="outline-light" as="a" href={props.gitHubLink} target="_blank" size="sm">
+                                <GitHubIcon fontSize="small"/> Visit Repo</Button>
+                        </Card.ImgOverlay>
+                    </Card>
+                </Row>
+            </FadeInSection>
         </Col>
     )
 }
