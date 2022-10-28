@@ -15,7 +15,6 @@ import RESEARCH3 from "../resources/images/research_3.png";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {useState} from "react";
 import {FadeInSection} from "./FadeInWrap";
-import LUBACKGROUND from "../resources/images/LU_background.png";
 
 export function Projects() {
     const portfolioImgs = [PORT1, PORT2, PORT3]
