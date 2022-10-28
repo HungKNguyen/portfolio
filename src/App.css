@@ -1,10 +1,4 @@
-.App {
-  background-color: var(--background);
-  color: var(--primary);
-  transition: background-color 0.5s, color 0.5s;
-}
-
-.App.night {
+.night {
   --background: #1c1e21;
   --sectionbackground: #000000;
   --graybackground : #424242;
@@ -17,7 +11,7 @@
   --change-mode: #fff176;
 }
 
-.App.day {
+.day {
   --background: #F5F5F5;
   --sectionbackground: #eeeeee;
   --graybackground : #eeeeee;
@@ -28,6 +22,12 @@
   --accent-secondary: #3f51b5;
   --background-brightness: 180%;
   --change-mode: #1a237e;
+}
+
+.app {
+  background-color: var(--background);
+  color: var(--primary);
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .fade-in-section.up {

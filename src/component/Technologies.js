@@ -6,7 +6,6 @@ import {FadeInSection} from "./FadeInWrap";
 export function Technologies(props) {
     const [showMore, setShowMore] = useState(false);
     const [buttonText, setText] = useState("See More");
-    const [theme, setTheme] = useState("light");
 
     const callback = useCallback(() => {
         setShowMore(!showMore)

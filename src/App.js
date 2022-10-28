@@ -30,7 +30,7 @@ function App() {
     }, [theme])
 
   return (
-    <Stack className={`App ${theme}`} gap={3} id="home">
+    <Stack className={`${theme} app`} gap={3} id="home">
         <Row><TabBar toggleThemeAction={toggleTheme} theme={theme}/></Row>
         <Stack className="pt-0 pt-lg-5 px-lg-0 px-4" gap={5}>
             <Row className="justify-content-lg-center mb-5 py-5" id="about">
