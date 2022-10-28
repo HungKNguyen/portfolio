@@ -145,11 +145,12 @@ span.accent-secondary {
   height: 100%;
   width: 100%;
   background-color: var(--background);
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .custom-background {
-  filter: grayscale(100%);
+  filter: contrast(20%) grayscale(100%) brightness(180%);
+  object-fit: cover;
 }
 
 .image-overlap {

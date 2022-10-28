@@ -6,12 +6,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import Transcript from "../resources/Academic History.pdf";
 import {FadeInSection} from "./FadeInWrap";
 
-export function Education() {
-    const backGroundImg = {
-        filter: "contrast(20%) grayscale(100%) brightness(var(--background-brightness))",
-        objectFit: "cover",
-    }
-
+export function Education(props) {
     const listItems = S.EDU_ACHIEVEMENT.map((text, id) =>
         <li key={id} style={{lineHeight: 1.8}} className="h5"><span className="primary">{text}</span></li>
     )
@@ -22,9 +17,13 @@ export function Education() {
                 <p className="display-6 text-center fw-semibold">{S.EDU_TITLE}</p>
             </FadeInSection>
             <FadeInSection direction="up">
-                <Card style={{backgroundColor: "var(--background)"}}>
-                    <Card.Img src={LUBACKGROUND} alt="Card image"  style={backGroundImg}/>
-                    <Card.ImgOverlay style={{overflow: "overlay"}}>
+                <Card style={{borderColor : "var(--accent-secondary)", backgroundColor : "var(--background)"}}>
+                    <div className="custom-background-wrap outer">
+                        <div className="custom-background-overlap top"/>
+                        <Card.Img src={LUBACKGROUND} alt="Card image" className="custom-background below"/>
+                    </div>
+
+                    <Card.ImgOverlay style={{overflow: "overlay", zIndex: 3}}>
                         <Card.Subtitle><p className="display-4"><span className="primary">{S.EDU_UNIVERSITY}</span></p></Card.Subtitle>
                         <Card.Title>
                             <p className="h2 my-4"><span className="accent fw-semibold">{S.EDU_DEGREE}</span></p>

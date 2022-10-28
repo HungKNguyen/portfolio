@@ -41,9 +41,9 @@ export function TabBar(props) {
                 </div>
                 <div className="d-inline d-md-none me-md-3 me-3">
                     <NavDropdown
-                        id="nav-dropdown-dark-example"
+                        id="nav-dropdown"
                         title="Menu"
-                        menuVariant="dark"
+                        menuVariant={props.theme === "day" ? "" : "dark"}
                         align="end"
                     >
                         <NavDropdown.Item href="#about">{S.TAB_BAR_ITEM_1}</NavDropdown.Item>

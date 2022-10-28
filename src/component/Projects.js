@@ -15,6 +15,7 @@ import RESEARCH3 from "../resources/images/research_3.png";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {useState} from "react";
 import {FadeInSection} from "./FadeInWrap";
+import LUBACKGROUND from "../resources/images/LU_background.png";
 
 export function Projects() {
     const portfolioImgs = [PORT1, PORT2, PORT3]
@@ -41,11 +42,6 @@ export function Projects() {
 
 function Project(props) {
     const [hover, setHover] = useState(false);
-
-    const backGroundImg = {
-        filter: "contrast(20%) grayscale(100%) brightness(var(--background-brightness))",
-        objectFit: "cover",
-    }
 
     return (
         <Col className="my-3" md={{ span : 10, offset : props.imgPos === "left" ? 0 : 2}}>
@@ -115,9 +111,12 @@ function Project(props) {
             </Row>
             <FadeInSection>
                 <Row className="d-block d-md-none">
-                    <Card style={{backgroundColor: "var(--background)"}}>
-                        <Card.Img src={props.imgSrcs[0]} alt="Card image" style={backGroundImg}/>
-                        <Card.ImgOverlay style={{overflow: "overlay"}}>
+                    <Card style={{borderColor : "var(--accent-secondary)", backgroundColor : "var(--graybackground)"}}>
+                        <div className="custom-background-wrap outer">
+                            <div className="custom-background-overlap top"/>
+                            <Card.Img src={props.imgSrcs[0]} alt="Card image" className="custom-background below"/>
+                        </div>
+                        <Card.ImgOverlay style={{overflow: "overlay", zIndex : 3}}>
                             <Card.Subtitle><span className="accent small">{S.PROJECT_BADGE}</span></Card.Subtitle>
                             <Card.Title><span className="fw-semibold">{props.title}</span></Card.Title>
                             <Card.Text><span className="tertiary">
