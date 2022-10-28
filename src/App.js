@@ -13,6 +13,7 @@ import {Projects} from "./component/Projects";
 import {useCallback, useEffect, useState} from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import { isBrowser } from "react-device-detect";
 
 function App() {
     const [theme, setTheme] = useState("day")
@@ -72,6 +73,7 @@ function App() {
               </Stack>
               <Footer/>
           </Stack>
+          {isBrowser &&
           <Particles
               id="tsparticles"
               init={particlesInit}
@@ -119,7 +121,7 @@ function App() {
                               default: "bounce",
                           },
                           random: false,
-                          speed: 3,
+                          speed: 1,
                           straight: false,
                       },
                       number: {
@@ -143,6 +145,7 @@ function App() {
               }}
               className="particle"
           />
+          }
       </>
   );
 }
