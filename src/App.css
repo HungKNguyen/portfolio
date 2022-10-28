@@ -32,8 +32,11 @@ html, body{
   --change-mode: #1a237e;
 }
 
+.non-browser-background {
+  background-color: var(--background);
+}
+
 .app {
-  /*background-color: var(--background);*/
   color: var(--primary);
   transition: background-color 0.5s, color 0.5s;
 }

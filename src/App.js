@@ -46,7 +46,7 @@ function App() {
 
   return (
       <>
-          <Stack className={`${theme} app`} gap={3} id="home" style={{zIndex: 2}}>
+          <Stack className={`${theme} app ${isBrowser ? "" : "non-browser-background"}`} gap={3} id="home" style={{zIndex: 2}}>
               <TabBar toggleThemeAction={toggleTheme} theme={theme}/>
               <Stack className="pt-0 pt-lg-5 px-lg-0 px-4" gap={5}>
                   <Row className="justify-content-lg-center mb-5 py-5" id="about">
