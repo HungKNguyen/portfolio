@@ -9,8 +9,9 @@ export function About() {
             <Row className="py-4">
                 <Col md={4}>
                     <FadeInSection direction="down">
-                        <Col xs={{ span: 8, offset : 2}} md={{span:12, offset :0}} className="profile_wrap">
-                            <Image fluid roundedCircle="true" src={profile} className="profile p-2"/>
+                        <Col xs={{ span: 8, offset : 2}} md={{span:12, offset :0}} className="image-wrap rounded-border outer">
+                            <div className="image-overlap top rounded-border"/>
+                            <Image fluid roundedCircle="true" src={profile} className="image-drop-shadow below"/>
                         </Col>
                     </FadeInSection>
                 </Col>

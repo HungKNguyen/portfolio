@@ -1,7 +1,7 @@
 import {Container, Stack, Row, Col, Button} from "react-bootstrap";
 import S from "../resources/string";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import {useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import {FadeInSection} from "./FadeInWrap";
 
 export function Languages() {
@@ -12,6 +12,14 @@ export function Languages() {
         transition: showMore ? "max-height 0.25s ease-in" : "max-height 0.15s ease-out",
         overflow: "hidden"
     };
+
+    const callback = useCallback(() => {
+        setShowMore(!showMore)
+    }, [showMore])
+
+    useEffect(() => {
+        setText(showMore ? "See Less" : "See More")
+    }, [showMore])
 
     const listItems = [
         <LanguageItem languageText={S.LANGUAGE_PYTHON_TITLE} devIcon={S.LANGUAGE_PYTHON_ICON}
@@ -39,7 +47,7 @@ export function Languages() {
     function FadeInList(start, end) {
         return (
             listItems.slice(start, end).map((item, index) =>
-                <FadeInSection direction="left" delay={1000/ (end-start - 2) * index}>
+                <FadeInSection direction="left" delay={1000/ (end-start - 2) * index} key={index}>
                     {item}
                 </FadeInSection>
             )
@@ -58,10 +66,7 @@ export function Languages() {
                 </div>
             </Stack>
             <Button variant="outline-success" size="lg"
-                    className="align-self-center custom_button" onClick={() => {
-                setShowMore(!showMore)
-                setText(showMore ? "See More" : "See Less")
-            }}>{buttonText}</Button>
+                    className="align-self-center accent-button" onClick={callback}>{buttonText}</Button>
         </Stack>
     )
 }
@@ -82,7 +87,10 @@ function LanguageItem(props)
         <span className="secondary"><li className="h5" key={id}>{text}</li></span>
     )
     return (
-        <Container className="border-bottom py-3">
+        <Container className="py-3" style={{
+            borderBottomStyle: "solid",
+            borderBottomWidth: "2px",
+            borderBottomColor : "var(--primary)"}}>
             <Row className="align-items-center mb-3">
                 <Col md={1} className="d-none d-md-inline">
                     <img src={props.devIcon} width="100%" height="100%" alt=""/>

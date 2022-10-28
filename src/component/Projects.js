@@ -43,13 +43,8 @@ function Project(props) {
     const [hover, setHover] = useState(false);
 
     const backGroundImg = {
-        filter: "grayscale(100%) brightness(30%)",
+        filter: "contrast(20%) grayscale(100%) brightness(var(--background-brightness))",
         objectFit: "cover",
-    }
-
-    const carouselStyle = {
-        transition: "filter 0.5s",
-        filter: hover ? "grayscale(0%) brightness(100%)" : "grayscale(100%) brightness(50%)"
     }
 
     return (
@@ -57,33 +52,37 @@ function Project(props) {
             <Row className="d-none d-md-flex">
                 <Col xs={{ span: 6, order: props.imgPos === "left" ? 12 : 1}} className="align-self-center">
                     <FadeInSection direction={props.imgPos === "left" ? "right" : "left"}>
-                        <div style={{outline : "var(--accent) solid 2px"}}>
-                            <Carousel fade controls={false} indicators={false} pause={false}
-                                      interval={hover ? 1000 : null} style={carouselStyle}
-                                      onMouseEnter={() => setHover(true)}
-                                      onMouseLeave={() => setHover(false)}>
-                                <Carousel.Item>
-                                    <img
-                                        className="w-100"
-                                        src={props.imgSrcs[0]}
-                                        alt="First slide"
-                                    />
-                                </Carousel.Item>
-                                <Carousel.Item>
-                                    <img
-                                        className="w-100"
-                                        src={props.imgSrcs[1]}
-                                        alt="Second slide"
-                                    />
-                                </Carousel.Item>
-                                <Carousel.Item>
-                                    <img
-                                        className="w-100"
-                                        src={props.imgSrcs[2]}
-                                        alt="Third slide"
-                                    />
-                                </Carousel.Item>
-                            </Carousel>
+                        <div className="image-wrap outer">
+                            <div className="image-overlap top"
+                                 onMouseEnter={() => setHover(true)}
+                                 onMouseLeave={() => setHover(false)}
+                            />
+                            <div style={{outline : "var(--accent) solid 2px"}} className="image-drop-shadow below">
+                                <Carousel fade controls={false} indicators={false} pause={false}
+                                          interval={hover ? 1000 : null}>
+                                    <Carousel.Item>
+                                        <img
+                                            className="w-100"
+                                            src={props.imgSrcs[0]}
+                                            alt="First slide"
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img
+                                            className="w-100"
+                                            src={props.imgSrcs[1]}
+                                            alt="Second slide"
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img
+                                            className="w-100"
+                                            src={props.imgSrcs[2]}
+                                            alt="Third slide"
+                                        />
+                                    </Carousel.Item>
+                                </Carousel>
+                            </div>
                         </div>
                     </FadeInSection>
                 </Col>
@@ -107,7 +106,7 @@ function Project(props) {
                             <Row className="my-3"><span className="accent">{props.keywords}</span></Row>
                         </FadeInSection>
                         <FadeInSection direction={props.imgPos === "left" ? "left" : "right"} delay={1000}>
-                            <Button variant="outline-light" as="a" href={props.gitHubLink} target="_blank">
+                            <Button variant="outline-light" className="primary-button" as="a" href={props.gitHubLink} target="_blank">
                                 <GitHubIcon/> Visit Repo
                             </Button>
                         </FadeInSection>
@@ -116,8 +115,8 @@ function Project(props) {
             </Row>
             <FadeInSection>
                 <Row className="d-block d-md-none">
-                    <Card className="bg-dark text-white">
-                        <Card.Img src={props.imgSrcs[0]} alt="Card image"  style={backGroundImg}/>
+                    <Card style={{backgroundColor: "var(--background)"}}>
+                        <Card.Img src={props.imgSrcs[0]} alt="Card image" style={backGroundImg}/>
                         <Card.ImgOverlay style={{overflow: "overlay"}}>
                             <Card.Subtitle><span className="accent small">{S.PROJECT_BADGE}</span></Card.Subtitle>
                             <Card.Title><span className="fw-semibold">{props.title}</span></Card.Title>
@@ -127,7 +126,7 @@ function Project(props) {
                             <Card.Text><span className="accent small">
                             {props.keywords}
                         </span></Card.Text>
-                            <Button variant="outline-light" as="a" href={props.gitHubLink} target="_blank" size="sm">
+                            <Button variant="outline-light" className="primary-button" as="a" href={props.gitHubLink} target="_blank" size="sm">
                                 <GitHubIcon fontSize="small"/> Visit Repo</Button>
                         </Card.ImgOverlay>
                     </Card>

@@ -1,11 +1,21 @@
 import {Card, Col, Stack, Row, Button, Carousel} from "react-bootstrap";
 import S from "../resources/string";
-import {useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import {FadeInSection} from "./FadeInWrap";
 
-export function Technologies() {
+export function Technologies(props) {
     const [showMore, setShowMore] = useState(false);
     const [buttonText, setText] = useState("See More");
+    const [theme, setTheme] = useState("light");
+
+    const callback = useCallback(() => {
+        setShowMore(!showMore)
+    }, [showMore])
+
+    useEffect(() => {
+        setText(showMore ? "See Less" : "See More")
+    }, [showMore])
+
     const listStyle = {
         maxHeight: showMore ? "800px" : "0px",
         transition: showMore ? "max-height 0.25s ease-in" : "max-height 0.15s ease-out",
@@ -13,7 +23,7 @@ export function Technologies() {
     }
 
     const carouselItemStyle = {
-        height : "350px"
+        height : "375px"
     }
 
     const cards = [
@@ -79,14 +89,11 @@ export function Technologies() {
                     </Row>
                 </div>
                 <Button variant="outline-success" size="lg"
-                        className="align-self-center custom_button" onClick={() => {
-                    setShowMore(!showMore)
-                    setText(showMore ? "See More" : "See Less")
-                }}>{buttonText}</Button>
+                        className="align-self-center accent-button" onClick={callback}>{buttonText}</Button>
             </Stack>
             <Row className="d-block d-md-none">
                 <FadeInSection delay={500}>
-                    <Carousel interval={2000}>
+                    <Carousel interval={2000} variant={props.theme === "day" ? "dark" : ""}>
                         {carouselItems}
                     </Carousel>
                 </FadeInSection>
@@ -102,14 +109,14 @@ function TechCard(props) {
         </Col>
     )
     return(
-        <Card bg="dark" text="light" style={{ borderColor : "var(--accent)", width : "100%", height : "100%"}}>
-            <Card.Header style={{ borderBottomColor : "var(--accent)",
+        <Card style={{ borderColor : "var(--accent)", width : "100%", height : "100%", borderWidth : "2px"}}>
+            <Card.Header style={{ borderBottomColor : "var(--accent)", borderBottomWidth : "2px",
                 backgroundColor : "var(--graybackground)"}}>
                 <Stack direction="horizontal">
                     {listIcons}
                 </Stack>
             </Card.Header>
-            <Card.Body>
+            <Card.Body style={{backgroundColor : "var(--background)"}}>
                 <Card.Title><span className="accent">{props.title}</span></Card.Title>
                 <Card.Text>{props.text}</Card.Text>
             </Card.Body>

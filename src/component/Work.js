@@ -28,8 +28,9 @@ function WorkItem(props) {
         <Row>
             <Col md={{ span : 3, order: props.logo_pos === "left" ? 12 : 1 }} className="my-2 my-md-0 my-sm-5">
                 <FadeInSection direction={props.logo_pos === "left" ? "right" : "left"}>
-                    <Col xs={{ span: 6, offset : 3}} md={{span:12, offset :0}} className="image_wrap">
-                        <Image fluid height="100%" width="100%" src={props.logo} className="image p-2"/>
+                    <Col xs={{ span: 6, offset : 3}} md={{span:12, offset :0}} className="image-wrap outer">
+                        <div className="image-overlap p-2 top"/>
+                        <Image fluid height="100%" width="100%" src={props.logo} className="image-drop-shadow below"/>
                     </Col>
                 </FadeInSection>
             </Col>

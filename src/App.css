@@ -1,11 +1,33 @@
-:root {
-  --background: #2E3136;
-  --sectionbackground: #1D1F24;
+.App {
+  background-color: var(--background);
+  color: var(--primary);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.App.night {
+  --background: #1c1e21;
+  --sectionbackground: #000000;
   --graybackground : #424242;
-  --primary: #F5F5F5;
-  --secondary: #8B8E97;
-  --tertiary : #bdbdbd;
-  --accent: #66FFBB;
+  --primary: #fafafa;
+  --secondary: #e0e0e0;
+  --tertiary : #f5f5f5;
+  --accent: #1de9b6;
+  --accent-secondary: #e0e0e0;
+  --background-brightness: 30%;
+  --change-mode: #fff176;
+}
+
+.App.day {
+  --background: #F5F5F5;
+  --sectionbackground: #eeeeee;
+  --graybackground : #eeeeee;
+  --primary: #212121;
+  --secondary: #616161;
+  --tertiary : #424242;
+  --accent: #00bcd4;
+  --accent-secondary: #3f51b5;
+  --background-brightness: 180%;
+  --change-mode: #1a237e;
 }
 
 .fade-in-section.up {
@@ -37,18 +59,42 @@
   visibility: visible;
 }
 
-.custom_button {
+.theme-button {
+  color: var(--accent) !important;
+}
+
+.theme-button:hover {
+  color: var(--change-mode) !important;
+}
+
+.accent-button {
   color: var(--accent) !important;
   border-color: var(--accent) !important;
 }
 
-.my_placeholder {
-  border-style: dotted;
+.accent-button:hover {
+  background-color: var(--accent) !important;
+  color: var(--primary) !important;
+}
+
+.primary-button {
+  color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.primary-button:hover {
+  background-color: var(--primary) !important;
+  color: var(--background) !important;
 }
 
 .tab_bar {
   background-color: var(--sectionbackground);
 }
+
+span.primary {
+  color: var(--primary);
+}
+
 
 span.accent {
   color: var(--accent);
@@ -62,28 +108,60 @@ span.tertiary {
   color: var(--tertiary);
 }
 
-.profile_wrap {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
+span.accent-secondary {
+  color: var(--accent-secondary);
+}
+
+.outer {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+}
+.outer > * {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+.outer .below {
+  z-index: 1;
+}
+.outer .top {
+  z-index: 2;
+}
+
+.rounded-border {
   border-radius: 50%;
-  border: var(--accent) solid 4px;
-  aspect-ratio: 1 / 1;
+}
+
+.image-wrap {
+  border: var(--accent) solid 3px;
   justify-content: center;
 }
 
-.profile {
+.custom-background-wrap {
+  justify-content: center;
+}
+
+.custom-background-overlap {
+  height: 100%;
+  width: 100%;
+  background-color: var(--background);
+  opacity: 0.5;
+}
+
+.custom-background {
   filter: grayscale(100%);
-  transition: filter 0.5s;
 }
 
-.profile:hover {
-  filter: grayscale(0%);
+.image-overlap {
+  height: 100%;
+  width: 100%;
+  background-color: var(--accent);
+  opacity: 0.2;
+  transition: opacity 0.5s;
 }
 
-.image_wrap {
-  border: var(--accent) solid 5px;
-  aspect-ratio: 1 / 1;
-  justify-content: center;
+.image-overlap:hover {
+  opacity: 0;
 }
 
 .image {
@@ -91,19 +169,15 @@ span.tertiary {
   transition: filter 0.5s;
 }
 
-.image:hover {
-  filter: grayscale(0%);
+.image-overlap:hover + .image {
+  filter: none;
 }
 
-
-
-span.primary {
-  color: var(--primary);
+.image-drop-shadow {
+  filter: grayscale(100%) drop-shadow(2vw 3vh 10px var(--accent));
+  transition: filter 0.5s;
 }
 
-.App {
-  background-color: var(--background);
-  color: var(--primary);
+.image-overlap:hover + .image-drop-shadow {
+  filter: none;
 }
-
-

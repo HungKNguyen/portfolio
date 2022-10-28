@@ -4,9 +4,10 @@ const S = {
     TAB_BAR_ITEM_2 : 'Skills',
     TAB_BAR_ITEM_3 : 'Experiences',
     TAB_BAR_ITEM_4 : 'Hire me',
+    TAB_BAR_ITEM_5 : 'Resume',
 
     ABOUT_GREET : <span className="accent">Hello,</span>,
-    ABOUT_GREET_NAME : "I'm Hung K. Nguyen",
+    ABOUT_GREET_NAME : <span className="accent-secondary">I'm Hung K. Nguyen</span> ,
     ABOUT_GREET_STATEMENT : <span>I am an aspiring <span className="accent">Software Developer</span> and
                             I like to write <span className="accent">code</span>.</span>,
     ABOUT_GREET_INTRO : <span className="secondary">Welcome to my little corner of the Internet.
@@ -14,7 +15,7 @@ const S = {
                     I love to solve problems, write software for businesses, and educate others.
                     If you are hiring for a software engineering position, I would love to connect for an interview.</span>,
 
-    LANGUAGES_TITLE : "Programming Languages that I worked with",
+    LANGUAGES_TITLE : <span className="accent-secondary">Programming Languages that I worked with</span>,
     LANGUAGES_PROFICIENCY : "Proficiency: ",
 
     LANGUAGE_C_TITLE : "C",
@@ -76,7 +77,7 @@ const S = {
     LANGUAGE_R_TEXTS : ["Built machine learning models as part of university coursework",
                         "Provide consultation for STEM research undergrads at Lawrence University"],
 
-    TECH_TITLE: "Technologies that I worked with",
+    TECH_TITLE: <span className="accent-secondary">Technologies that I worked with</span>,
 
     TECH_FRONTEND_TITLE : "Front End Web Dev",
     TECH_FRONTEND_ICONS : ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -119,7 +120,7 @@ const S = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg",
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xcode/xcode-original.svg"],
-    TECH_IDE_TEXT : "As I code with more languages, I am flexible with various IDEs, including VS Code, Visual Studio," +
+    TECH_IDE_TEXT : "As I code with more languages, I am flexible with various IDEs, including VS Code, Visual Studio, " +
         "JetBrains' IDEs, and XCode",
 
     TECH_OFFICE_TITLE : "Office Softwares",
@@ -144,9 +145,9 @@ const S = {
     TECH_UNITY3D_ICONS : ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"],
     TECH_UNITY3D_TEXT : "I have used Unity3D to build Virtual Reality applications",
 
-    WORK_TITLE : "Work experience I got",
+    WORK_TITLE : <span className="accent-secondary">Work experience I got</span>,
 
-    WORK_LU_INSTITUTION : "Lawrence University",
+    WORK_LU_INSTITUTION : <span className="accent-secondary">Lawrence University</span>,
     WORK_LU_TITLE : "Teaching Assistant",
     WORK_LU_LOCATION : "Appleton, WI",
     WORK_LU_DATE : "Jan 2022 - Present",
@@ -156,7 +157,7 @@ const S = {
         <span><span className="accent">Boost</span> an average of <span className="accent">20%</span> of students' <span className="accent">GPA</span>, <span className="accent">reduce</span> students troubleshooting and debugging <span className="accent">time</span> by <span className="accent">66%</span></span>
     ],
 
-    WORK_ID_INSTITUTION : "ID Tech Camp",
+    WORK_ID_INSTITUTION : <span className="accent-secondary">ID Tech Camp</span>,
     WORK_ID_TITLE : "Computer Science Instructor",
     WORK_ID_LOCATION : "Lake Forest, IL",
     WORK_ID_DATE : "Jun 2022 - Aug 2022",
@@ -165,27 +166,27 @@ const S = {
         <span><span className="accent">Contributed</span> codes and recommended new ideas to improve curriculums on 3 company's forums</span>
     ],
 
-    PROJECT_TITLE : "Did I mention that I like to code",
+    PROJECT_TITLE : <span className="accent-secondary">Did I mention that I like to code</span>,
     PROJECT_BADGE : "Project",
 
-    PROJECT_PORTFOLIO_TITLE : "Portfolio Page",
+    PROJECT_PORTFOLIO_TITLE : <span className="accent-secondary">Portfolio Page</span>,
     PROJECT_PORTFOLIO_TEXT : "For the longest time, I have wanted my own website to showcase my skills as well as demonstrating my web development skills. So finally here it is, my portfolio website.",
     PROJECT_PORTFOLIO_KEY_WORDS : "React.js, HTML, CSS, Portfolio",
     PROJECT_PORTFOLIO_GITHUB_LINK : "https://github.com/HungKNguyen/portfolio",
 
-    PROJECT_MINE_TITLE : "Minesweeper solver",
+    PROJECT_MINE_TITLE : <span className="accent-secondary">Minesweeper solver</span>,
     PROJECT_MINE_TEXT : "I made this project while teaching myself Python. " +
         "I used Pygame to remake the game and as an added bonus implemented an AI solver to play the game automatically",
     PROJECT_MINE_KEY_WORDS : "Python, Pygame, AI",
     PROJECT_MINE_GITHUB_LINK : "https://github.com/HungKNguyen/MineSweeperCloneAndAISolver",
 
-    PROJECT_RESEARCH_TITLE : "COVID Research",
+    PROJECT_RESEARCH_TITLE : <span className="accent-secondary">COVID Research</span>,
     PROJECT_RESEARCH_TEXT : "This is part of my advanced econometrics coursework." +
         " I built a lagged first difference model to measure the effectiveness of COVID non-pharmaceutical interventions using R",
     PROJECT_RESEARCH_KEY_WORDS : "R Markdown, Tidyverse, Data Analysis, Research",
     PROJECT_RESEARCH_GITHUB_LINK : "https://github.com/HungKNguyen/COVIDNPIs",
 
-    PROJECT_EBOOK_TITLE : "Mock EBook Website",
+    PROJECT_EBOOK_TITLE : <span className="accent-secondary">Mock EBook Website</span>,
     PROJECT_EBOOK_TEXT : "My first website, following a Coursera class on Fullstack web development." +
         " This website mocks a EBook selling service, with MongoDB database, Express.js/Node.js back-end, and React.js front-end." +
         " In addition, this website uses local-authentication and Facebook/Google OAuth2.0." +
@@ -194,7 +195,7 @@ const S = {
     PROJECT_EBOOK_GITHUB_LINK : "https://github.com/HungKNguyen/EBookVendorBackend",
 
 
-    EDU_TITLE : "My education",
+    EDU_TITLE : <span className="accent-secondary">My education</span>,
     EDU_UNIVERSITY : "Lawrence University",
     EDU_DEGREE : "BA in Computer Science and Economics",
     EDU_GRADUATING : "June 2023",
@@ -205,7 +206,7 @@ const S = {
         "Artificial Intelligence"],
     EDU_MERIT_LINK : "https://meritpages.com/hungknguyen",
 
-    HIRING_TITLE : "Let's work together",
+    HIRING_TITLE : <span className="accent-secondary">Let's work together</span>,
     HIRING_TEXT : <span>
         <span>I am currently looking for a <span className="accent">junior software developer</span> position,</span>
         <span> in the fields of <span className="accent">Web Development</span> and <span className="accent">Mobile Development. </span></span>
@@ -213,7 +214,7 @@ const S = {
         <span>I can be reached via email at <span className="accent">hung.k.nguyen@lawrence.edu.</span></span>
                     </span>,
 
-    FOOTER_TITLE : "Designed and Built by Hung Nguyen",
+    FOOTER_TITLE : <span className="accent-secondary">Designed and Built by Hung Nguyen</span>,
 }
 
 export default S;
