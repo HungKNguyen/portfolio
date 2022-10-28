@@ -33,7 +33,7 @@ html, body{
 }
 
 .app {
-  background-color: var(--background);
+  /*background-color: var(--background);*/
   color: var(--primary);
   transition: background-color 0.5s, color 0.5s;
 }
@@ -189,4 +189,10 @@ span.accent-secondary {
 
 .image-overlap:hover + .image-drop-shadow {
   filter: none;
+}
+
+.particle {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
 }
